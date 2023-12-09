@@ -1,0 +1,51 @@
+extends ../layout/admin
+
+block styles
+    link(rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css")
+
+block contenido
+    div.py-10
+        h1.text-4xl.my-10.font-extrabold.text-center Paquetes y algunos servicios que pueden ir en conjunto
+        h2.text-center.text-2xl.font-extrabold -- El mejor servicio para el mejor cliente --
+
+        div(class="bg-white shadow py-8 px-4 rounded mx-auto max-w-4xl my-10 md:px-10")
+            form.space-y-8(method="POST" action="/propiedades/crear")
+                input(type="hidden" name="_csrf" value= csrfToken)
+                div.space-y-8   
+                    h3.text-lg.leading-6.font-medium.text-gray-900.text-center.mx-auto Información General
+                    div(class="container min-w-min md:w-1/2")
+                        label.block.text-sm.uppercase.text-black-500.mb-3.font-bold(for="titulo") Ataudes 
+                        p(class= "text-aling-left ml-10" style="width:600px") Ataudes desde:
+                        p(class= "text-aling-left ml-10" style="width:600px") Ataud básico $7,000
+                        p(class= "text-aling-left ml-10" style="width:600px") Ataud askotran $9,500
+                        p(class= "text-aling-left ml-10" style="width:600px") Ataud MOF $12,500
+                        p(class= "text-aling-left ml-10" style="width:600px") Ataud madera básico osiris $15,000
+                        p(class= "text-aling-left ml-10" style="width:600px") Para más informacion sobre los precios preciona en icono de WhatsApp que se encuentra al final de la página. 
+                        label.block.text-sm.uppercase.text-black-500.mb-3.font-bold(for="titulo") Panteon
+                        label.block.text-sm.uppercase.text-black-500.mb-3.font-bold(for="titulo") Asesoría en tramites legales 
+                        label.block.text-sm.uppercase.text-black-500.mb-3.font-bold(for="titulo") Asesoría en casos legales 
+                        label.block.text-sm.uppercase.text-black-500.mb-3.font-bold(for="titulo") Capilla domiciliaría
+                        label.block.text-sm.uppercase.text-black-500.mb-3.font-bold(for="titulo") Embalzamamiento
+                        label.block.text-sm.uppercase.text-black-500.mb-3.font-bold(for="titulo") Sillas 
+                        label.block.text-sm.uppercase.text-black-500.mb-3.font-bold(for="titulo") Lonas 
+                        label.block.text-sm.uppercase.text-black-500.mb-3.font-bold(for="titulo") Obituario digital
+                        label.block.text-sm.uppercase.text-black-500.mb-3.font-bold(for="titulo") Traslados  
+
+                section(class="relative")
+                    div(class="carousel-container mx-auto overflow-hidden bg-gray-800 rounded-md shadow-lg md:w-1/2")
+                        div(class="carousel-wrapper transition-transform duration-300 ease-in-out transform translate-x-0")
+                        
+                            div(class="carousel-slide w-full flex items-center justify-center")
+                                   img(src="/img/ataudMadera2.JPG", alt="Slide 1", class="w-full h-auto rounded-md" style="width: 250px")
+
+                            div(class="carousel-slide w-full flex items-center justify-center")
+                                img(src="/img/ataudV.JPG", alt="Slide 2", class="w-full h-auto rounded-md" style="width: 250px")
+
+                            div(class="carousel-slide w-full flex items-center justify-center")
+                                img(src="/img/ataudVirgen.JPG", alt="Slide 3", class="w-full h-auto rounded-md" style="width: 250px")
+
+                        button(type="button" class="absolute left-0 top-1/2 transform -translate-y-1/2 px-4 py-2 text-black bg-gray-600 rounded focus:outline-none", onclick="prevSlide()")
+                            
+                        button(type="button" class="absolute right-0 top-1/2 transform -translate-y-1/2 px-4 py-2 text-black bg-gray-600 rounded focus:outline-none", onclick="nextSlide()")
+                    
+block scripts 

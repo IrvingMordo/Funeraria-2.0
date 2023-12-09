@@ -1,0 +1,11 @@
+footer.bg-azulBonito.p-4 
+    h1.text-2xl.text-white.font-extrabold.text-center.mx-auto   Contactanos por nuestras redes sociales 
+        nav(class="text-sm md:flex md:items-center md:gap-3 font-bold text-white hidden  first-letter justify-center") 
+            a(href="https://wa.me/527647671091" class="flex items-center bg-blue-500 text-white px-3 py-2 rounded focus:outline-none focus:shadow-outline-blue")
+                img(src="/img/whatsapp.png", alt="WhatsApp" class="h-4 w-4 mr-2" style="width: 50px")
+            a(href="https://www.facebook.com/p/Funerales-Los-Angeles-Xicotepec-100049384310076/?paipv=0&eav=AfaXDomeSprccVyRHKPYFSxQhCu5MIY3v1tGLTr6aM_JgD4dPwBGm2usAJlgCq_08Q0&_rdr" class="flex items-center bg-blue-500 text-white px-3 py-2 rounded focus:outline-none focus:shadow-outline-blue")
+                img(src="/img/facebook.png", alt="Facebook" class="h-4 w-4 mr-2" style="width: 50px")
+            a(href="") --Correo icon--
+            a(href="") --Instagram icon--
+            form(action="/auth/cerrar-sesion" method="POST")  
+                input(type="hidden" name="_csrf" value= csrfToken)   

@@ -1,0 +1,13 @@
+header.bg-azulBonito.p-4 
+    .container.mx-auto.flex.justify-between.items-center 
+        h1.text-2xl.text-white.font-extrabold.text-center Funeraria 
+            span.font-normal Los Ángeles
+
+        nav(class="my-5 text-sm md:flex md:items-center md:gap-3 font-bold text-white hidden") 
+            a(href="") Obituario 
+            a(href="") Servicios 
+            a(href="") Contacto
+            a(href="/propiedades/crear") Paquetes  
+            form(action="/auth/cerrar-sesion" method="POST")  
+                input(type="hidden" name="_csrf" value= csrfToken)
+                input(type="submit" class="bg-azulClarito py-2 px-10 rounded-lg" value="Cerrar Sesión")    
